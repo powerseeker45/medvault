@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="deploymentTargetSelector">
+    <selectionStates>
+      <SelectionState runConfigName="app">
+        <option name="selectionMode" value="DIALOG" />
+        <DropdownSelection timestamp="2025-04-19T17:22:14.830871958Z">
+          <Target type="DEFAULT_BOOT">
+            <handle>
+              <DeviceId pluginId="LocalEmulator" identifier="path=/home/dell-x/.android/avd/Pixel_9_Pro_XL.avd" />
+            </handle>
+          </Target>
+        </DropdownSelection>
+        <DialogSelection>
+          <targets>
+            <Target type="DEFAULT_BOOT">
+              <handle>
+                <DeviceId pluginId="PhysicalDevice" identifier="serial=000793459000036" />
+              </handle>
+            </Target>
+            <Target type="DEFAULT_BOOT">
+              <handle>
+                <DeviceId pluginId="LocalEmulator" identifier="path=/home/dell-x/.android/avd/Pixel_9_Pro_XL.avd" />
+              </handle>
+            </Target>
+          </targets>
+        </DialogSelection>
+      </SelectionState>
+    </selectionStates>
+  </component>
+</project>

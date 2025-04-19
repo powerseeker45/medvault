@@ -1,0 +1,46 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="Appointment"
+            app:titleTextColor="@android:color/white" />
+
+
+        <EditText android:id="@+id/doctorInput" android:hint="Doctor's Name"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+        <EditText android:id="@+id/hospitalInput" android:hint="Hospital/Clinic"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+        <Button android:id="@+id/dateBtn" android:text="Select Date"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+        <Button android:id="@+id/timeBtn" android:text="Select Time"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+        <EditText android:id="@+id/notesInput" android:hint="Purpose / Notes"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+        <Button android:id="@+id/saveBtn" android:text="Save Appointment"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/viewAppointmentsBtn"
+            android:text="View Appointments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>

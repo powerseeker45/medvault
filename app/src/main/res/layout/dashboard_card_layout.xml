@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardRecords"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:elevation="6dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Encrypted Health Records"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#000" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardReminders"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:elevation="6dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Pill Reminders and Alerts"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#000" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardAppointments"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:elevation="6dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Doctor Appointment Tracker"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#000" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFamily"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:elevation="6dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Family Mode"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#000" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardEmergency"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:elevation="6dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Emergency QR Access"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#000" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardProfile"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:elevation="6dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Biometric Lock / Profile"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#000" />
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

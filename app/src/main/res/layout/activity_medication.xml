@@ -1,0 +1,35 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="Medication Details"
+            app:titleTextColor="@android:color/white" />
+
+
+        <EditText android:id="@+id/nameInput" android:hint="Medication Name"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <EditText android:id="@+id/dosageInput" android:hint="Dosage"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <EditText android:id="@+id/timeInput" android:hint="Time (HH:mm)"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <EditText android:id="@+id/pillsLeftInput" android:hint="Pills Left"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <EditText android:id="@+id/refillThresholdInput" android:hint="Refill Threshold"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <Button android:id="@+id/setReminderBtn" android:text="Set Reminder"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>
