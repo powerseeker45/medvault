@@ -1,43 +1,111 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:background="@color/app_background"
+    android:padding="0dp"
     android:fitsSystemWindows="true">
 
+    <!-- Toolbar with shadow for depth -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         app:title="Add Record"
-        app:titleTextColor="@android:color/white" />
+        app:titleTextColor="@android:color/white"
+        android:elevation="6dp" />
 
-    <EditText
-        android:id="@+id/titleInput"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Title" />
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="0dp">
 
-    <EditText
-        android:id="@+id/notesInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Notes" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="0dp"
+            android:gravity="center_horizontal">
 
-    <EditText
-        android:id="@+id/dateInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Date" />
+            <!-- Card-like container for form elements -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="16dp"
+                android:backgroundTint="@color/app_card">
 
-    <Button
-        android:id="@+id/saveBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Save Record"
-        android:onClick="saveRecord"
-        android:layout_marginTop="12dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <EditText
+                        android:id="@+id/titleInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:hint="Title"
+                        android:background="@drawable/bg_edittext"
+                        android:inputType="text" android:padding="14dp"
+                        android:textColor="#222"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="16dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/notesInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:hint="Notes"
+                        android:background="@drawable/bg_edittext"
+                        android:inputType="text" android:padding="14dp"
+                        android:textColor="#222"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="16dp"
+                        tools:ignore="HardcodedText" />
+
+                    <EditText
+                        android:id="@+id/dateInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:hint="Date"
+                        android:background="@drawable/bg_edittext"
+                        android:inputType="datetime" android:padding="14dp"
+                        android:textColor="#222"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="24dp"
+                        tools:ignore="HardcodedText" />
+
+                    <Button
+                        android:id="@+id/saveBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Save Record"
+                        android:onClick="saveRecord"
+                        android:backgroundTint="?attr/colorPrimary"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:elevation="2dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:padding="14dp"
+                        android:background="@drawable/bg_button_rounded"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -32,7 +32,7 @@ public class QRScanActivity extends AppCompatActivity {
         }
     }
 
-    private BarcodeCallback callback = result -> {
+    private final BarcodeCallback callback = result -> {
         if (result != null) {
             // Directly display the QR data without decryption
             String scannedData = result.getText();

@@ -1,35 +1,119 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    android:background="@color/app_background"
+    android:clipToPadding="false">
 
     <LinearLayout
-        android:padding="16dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:gravity="center_horizontal">
 
+        <!-- Elevated Toolbar -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:title="Family Details"
-            app:titleTextColor="@android:color/white" />
+            app:titleTextColor="@android:color/white"
+            android:elevation="6dp" />
 
+        <!-- CardView for the form -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="16dp"
+            android:backgroundTint="@color/app_card">
 
-        <EditText android:id="@+id/nameInput" android:hint="Name"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
-        <EditText android:id="@+id/ageInput" android:hint="Age"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
-        <EditText android:id="@+id/relationInput" android:hint="Relation (e.g. Mom)"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
 
-        <Button android:id="@+id/addBtn" android:text="Add Member"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/nameInput"
+                    android:autofillHints=""
+                    android:hint="Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edittext"
+                    android:inputType="text" android:padding="14dp"
+                    android:textColor="#222"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"
+                    tools:ignore="HardcodedText" />
 
-        <ListView android:id="@+id/familyList"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/ageInput"
+                    android:autofillHints=""
+                    android:hint="Age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edittext"
+                    android:inputType="number" android:padding="14dp"
+                    android:textColor="#222"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/relationInput"
+                    android:autofillHints=""
+                    android:hint="Relation (e.g. Mom)"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edittext"
+                    android:inputType="text" android:padding="14dp"
+                    android:textColor="#222"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="24dp"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/addBtn"
+                    android:text="Add Member"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button_rounded"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:elevation="2dp"
+                    android:padding="14dp"
+                    android:layout_marginBottom="8dp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ListView for family members, visually separated -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="16dp"
+            android:backgroundTint="@color/app_card">
+
+            <ListView
+                android:id="@+id/familyList"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:divider="#BDBDBD"
+                android:dividerHeight="1dp"
+                android:padding="8dp"/>
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 </ScrollView>

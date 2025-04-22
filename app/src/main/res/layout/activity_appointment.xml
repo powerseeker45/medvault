@@ -1,46 +1,130 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    android:background="@color/app_background"
+    android:clipToPadding="false">
 
     <LinearLayout
-        android:padding="16dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:gravity="center_horizontal">
 
+        <!-- Toolbar with shadow -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:title="Appointment"
-            app:titleTextColor="@android:color/white" />
+            app:titleTextColor="@android:color/white"
+            android:elevation="6dp" />
 
-
-        <EditText android:id="@+id/doctorInput" android:hint="Doctor's Name"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
-
-        <EditText android:id="@+id/hospitalInput" android:hint="Hospital/Clinic"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
-
-        <Button android:id="@+id/dateBtn" android:text="Select Date"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
-
-        <Button android:id="@+id/timeBtn" android:text="Select Time"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
-
-        <EditText android:id="@+id/notesInput" android:hint="Purpose / Notes"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
-
-        <Button android:id="@+id/saveBtn" android:text="Save Appointment"
-            android:layout_width="match_parent" android:layout_height="wrap_content" />
-        <Button
-            android:id="@+id/viewAppointmentsBtn"
-            android:text="View Appointments"
+        <!-- CardView for the form -->
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="16dp"
+            android:backgroundTint="@color/app_card">
 
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <EditText
+                    android:id="@+id/doctorInput"
+                    android:autofillHints=""
+                    android:hint="Doctor's Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edittext"
+                    android:inputType="text" android:padding="14dp"
+                    android:textColor="#222"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp" />
+
+                <EditText
+                    android:id="@+id/hospitalInput"
+                    android:autofillHints=""
+                    android:hint="Hospital/Clinic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edittext"
+                    android:inputType="text" android:padding="14dp"
+                    android:textColor="#222"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="16dp" />
+
+                <Button
+                    android:id="@+id/dateBtn"
+                    android:text="Select Date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button_rounded"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:elevation="2dp"
+                    android:layout_marginBottom="12dp"
+                    android:padding="14dp"/>
+
+                <Button
+                    android:id="@+id/timeBtn"
+                    android:text="Select Time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button_rounded"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:elevation="2dp"
+                    android:layout_marginBottom="16dp"
+                    android:padding="14dp"/>
+
+                <EditText
+                    android:id="@+id/notesInput"
+                    android:autofillHints=""
+                    android:hint="Purpose/Notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edittext"
+                    android:inputType="text" android:padding="14dp"
+                    android:textColor="#222"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="24dp" />
+
+                <Button
+                    android:id="@+id/saveBtn"
+                    android:text="Save Appointment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button_rounded"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:elevation="2dp"
+                    android:layout_marginBottom="12dp"
+                    android:padding="14dp"/>
+
+                <Button
+                    android:id="@+id/viewAppointmentsBtn"
+                    android:text="View Appointments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_button_outline"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:elevation="0dp"
+                    android:padding="14dp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 </ScrollView>

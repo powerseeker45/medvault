@@ -1,31 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="#FAFAFA"
-    android:fitsSystemWindows="true">
+    android:background="@color/app_background"
+    android:fitsSystemWindows="true"
+    android:padding="0dp">
 
+    <!-- Toolbar with elevation for depth -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
+        app:title="Settings"
+        app:titleTextColor="@android:color/white"
+        android:elevation="6dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <TextView
+    <!-- CardView for content grouping -->
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enable Biometric Login"
-        android:textSize="18sp"
-        android:paddingTop="24dp" />
+        android:layout_marginTop="42dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="16dp"
+        android:backgroundTint="@color/app_card">
 
-    <Switch
-        android:id="@+id/switchBiometric"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Biometric Authentication" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="28dp">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enable Biometric Login"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:paddingBottom="16dp"
+                android:textColor="#222222"
+                tools:ignore="HardcodedText" />
+
+            <Switch
+                android:id="@+id/switchBiometric"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Biometric Authentication   "
+                android:textColor="#444444"
+                android:textSize="16sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp"
+                tools:ignore="HardcodedText,UseSwitchCompatOrMaterialXml" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

@@ -43,6 +43,7 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     annotationProcessor(libs.room.compiler)
+    implementation ("com.google.android.material:material:1.2.0") // or newer
     implementation ("com.journeyapps:zxing-android-embedded:4.3.0")
-    implementation ("androidx.biometric:biometric:1.2.0-alpha04")
+    implementation (libs.biometric)
 }

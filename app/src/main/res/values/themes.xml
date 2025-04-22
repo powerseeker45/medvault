@@ -1,9 +1,23 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.MedVault" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/app_base</item>
+
+        <!-- Apply a custom toolbar style that includes popupTheme -->
+        <item name="toolbarStyle">@style/CustomToolbarStyle</item>
     </style>
 
     <style name="Theme.MedVault" parent="Base.Theme.MedVault" />
+
+    <!-- Custom Toolbar Style to apply popupTheme -->
+    <style name="CustomToolbarStyle" parent="Widget.Material3.Toolbar">
+        <item name="popupTheme">@style/CustomPopupTheme</item>
+    </style>
+
+    <!-- Custom Popup Theme for readable menu text -->
+    <style name="CustomPopupTheme" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <!-- Optional: You can define custom textColor here if needed -->
+        <item name="android:textColor">@color/black</item>
+    </style>
 </resources>

@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
 import androidx.appcompat.widget.Toolbar;
 import com.example.medvault.AppDatabase;
 import com.example.medvault.Appointment;
@@ -46,9 +45,7 @@ public class AppointmentActivity extends AppCompatActivity {
         dateBtn.setOnClickListener(v -> showDatePicker());
         timeBtn.setOnClickListener(v -> showTimePicker());
         saveBtn.setOnClickListener(v -> saveAppointment());
-        viewAppointmentsBtn.setOnClickListener(v -> {
-            startActivity(new Intent(this, ViewAppointmentsActivity.class));
-        });
+        viewAppointmentsBtn.setOnClickListener(v -> startActivity(new Intent(this, ViewAppointmentsActivity.class)));
     }
 
     @Override

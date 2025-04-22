@@ -7,7 +7,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.medvault.User;
 import com.example.medvault.UserDao;
-import com.example.medvault.AppDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
 

@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
+
 import com.example.medvault.AppDatabase;
 import com.example.medvault.Appointment;
 

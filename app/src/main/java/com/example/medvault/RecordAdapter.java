@@ -9,15 +9,14 @@ import android.widget.TextView;
 
 import com.example.medvault.R;
 import com.example.medvault.HealthRecord;
-import com.example.medvault.EncryptionUtil;
 
 import java.util.List;
 
 public class RecordAdapter extends BaseAdapter {
 
-    Context context;
-    List<HealthRecord> recordList;
-    LayoutInflater inflater;
+    final Context context;
+    final List<HealthRecord> recordList;
+    final LayoutInflater inflater;
 
     public RecordAdapter(Context context, List<HealthRecord> recordList) {
         this.context = context;

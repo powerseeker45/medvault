@@ -22,7 +22,7 @@ public class MedicationReminderActivity extends AppCompatActivity {
     ListView reminderListView;
 
     int hour, minute;
-    ArrayList<String> reminders = new ArrayList<>();
+    final ArrayList<String> reminders = new ArrayList<>();
     ArrayAdapter<String> adapter;
 
     @Override

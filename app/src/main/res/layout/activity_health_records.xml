@@ -1,34 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="12dp"
+    android:background="@color/app_background"
+    android:padding="0dp"
     android:fitsSystemWindows="true">
 
+    <!-- Elevated Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         app:title="Health Records"
-        app:titleTextColor="@android:color/white" />
+        app:titleTextColor="@android:color/white"
+        android:elevation="6dp" />
 
+    <!-- CardView for ListView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/listCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/addBtn"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="0dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="16dp"
+        android:backgroundTint="@color/app_card">
 
-    <Button
+        <ListView
+            android:id="@+id/recordsList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#DDDDDD"
+            android:dividerHeight="1dp"
+            android:padding="8dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- FloatingActionButton for Add Record -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Record"
-        android:layout_alignParentTop="true"
+        android:layout_margin="24dp"
         android:layout_alignParentEnd="true"
-        android:onClick="openAddRecord"/>
-
-    <ListView
-        android:id="@+id/recordsList"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/addBtn"
-        android:divider="@android:color/darker_gray"
-        android:dividerHeight="1dp"/>
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="Add Record"
+        app:srcCompat="@drawable/group_add_24px"
+        app:backgroundTint="?attr/colorPrimary"
+        app:tint="@android:color/white"
+        android:onClick="openAddRecord"
+        tools:ignore="HardcodedText" />
 </RelativeLayout>

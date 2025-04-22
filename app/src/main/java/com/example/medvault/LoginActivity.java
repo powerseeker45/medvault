@@ -9,7 +9,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.medvault.UserDao;
 import com.example.medvault.User;
-import com.example.medvault.AppDatabase;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -49,8 +48,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        registerBtn.setOnClickListener(v -> {
-            startActivity(new Intent(this, RegisterActivity.class));
-        });
+        registerBtn.setOnClickListener(v -> startActivity(new Intent(this, RegisterActivity.class)));
     }
 }
